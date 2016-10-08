@@ -1,7 +1,13 @@
-FROM debian
-MAINTAINER Saul Alonso
-RUN apt-get update
+FROM ubuntu:14.04
+
+MAINTAINER Saúl ALonso Ibarra Luevano
+
+RUN sudo apt-get -y update
+RUN sudo apt-get install mysql-server
+RUN sudo apt-get install -y git
+RUN sudo apt-get  install -y nodejs npm
 RUN apt-get install apache2 -y --force-yes
-RUN echo "<h1>Apache con docker</h1> <h2>Hola mundo222!</h2>" > /var/www/html/index.html
+
 EXPOSE 80
 ENTRYPOINT apache2ctl -D FOREGROUND
+ENTRYPOINT mysql2ctl -D FOREGROUND

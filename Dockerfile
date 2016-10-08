@@ -1,8 +1,8 @@
+FROM ubuntu:14.04
 FROM gliderlabs/alpine:3.3
 MAINTAINER Saul ALonso Ibarra Luevano
 RUN apk --no-cache add git bash openssh
 
-#FROM ubuntu:14.04
 #MAINTAINER Saul ALonso Ibarra Luevano
 #RUN apt-get update
 #RUN apt-get -y install python-pip

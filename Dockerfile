@@ -10,7 +10,7 @@ CMD git help
 #FROM gliderlabs/alpine:3.3
 #MAINTAINER Saul ALonso Ibarra Luevano
 #RUN apk --no-cache add git bash openssh
-#RUN git clone https://github.com/AlonsoIbarra/NodeMysql.git
+RUN git clone https://github.com/AlonsoIbarra/NodeMysql.git
 
 #FROM ubuntu:14.04
 #MAINTAINER Saul ALonso Ibarra Luevano

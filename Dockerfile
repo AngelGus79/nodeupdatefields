@@ -1,7 +1,16 @@
-FROM gliderlabs/alpine:3.3
+FROM debian:latest
 MAINTAINER Saul ALonso Ibarra Luevano
-RUN apk --no-cache add git bash openssh
-RUN git clone https://github.com/AlonsoIbarra/NodeMysql.git
+ENV DEBIAN_FRONTEND noninteractive
+RUN mkdir -p /root/work/
+WORKDIR /root/work/
+RUN apt-get -y update && apt-get -y install git
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/man/?? /usr/share/man/??_*
+CMD git help
+
+#FROM gliderlabs/alpine:3.3
+#MAINTAINER Saul ALonso Ibarra Luevano
+#RUN apk --no-cache add git bash openssh
+#RUN git clone https://github.com/AlonsoIbarra/NodeMysql.git
 
 #FROM ubuntu:14.04
 #MAINTAINER Saul ALonso Ibarra Luevano

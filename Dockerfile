@@ -1,5 +1,5 @@
 FROM gliderlabs/alpine:3.3
-FROM ubuntu:14.04
+#FROM ubuntu:14.04
 MAINTAINER Saul ALonso Ibarra Luevano
 RUN apk --no-cache add git bash openssh
 

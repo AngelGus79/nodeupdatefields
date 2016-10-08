@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu
 MAINTAINER Saúl ALonso Ibarra Luevano
 RUN sudo apt-get -y update
 RUN sudo apt-get install mysql-server

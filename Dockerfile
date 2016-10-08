@@ -1,11 +1,13 @@
 FROM debian:latest
 MAINTAINER Saul ALonso Ibarra Luevano
-ENV DEBIAN_FRONTEND noninteractive
-RUN mkdir -p /root/work/
-WORKDIR /root/work/
+#ENV DEBIAN_FRONTEND noninteractive
+RUN mkdir -p /opensource/
+WORKDIR /opensource/
 RUN apt-get -y update && apt-get -y install git
+RUN apt-get -y install python-pip
+RUN pip install nodejs
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/man/?? /usr/share/man/??_*
-CMD git help
+#CMD git help
 
 #FROM gliderlabs/alpine:3.3
 #MAINTAINER Saul ALonso Ibarra Luevano

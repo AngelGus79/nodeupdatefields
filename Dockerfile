@@ -3,5 +3,5 @@ MAINTAINER Saul ALonso Ibarra Luevano
 RUN apt-get update
 RUN apt-get -y install python-pip
 RUN pip install nodejs
-RUN git clone https://github.com/AlonsoIbarra/NodeMysql.git
+# RUN git clone https://github.com/AlonsoIbarra/NodeMysql.git
 

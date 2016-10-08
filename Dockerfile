@@ -1,19 +1,5 @@
-FROM ubuntu:14.04
-
-MAINTAINER Saul ALonso Ibarra Luevano
-RUN apk --update add git \
- && rm -rf /var/cache/apk/*
-
-ENV HOME /root
-
-# Put convienience-script into container to have it accessible
-# without checking out from github-repo. Display with:
-# $ docker run --entrypoint=/bin/cat axeclbr/git /root/git
-COPY git /root/git
-VOLUME /root/workspace
-WORKDIR /root/workspace
-
-ENTRYPOINT ["/usr/bin/git"]
+FROM gliderlabs/alpine:3.3
+RUN apk --no-cache add git bash openssh
 
 #FROM ubuntu:14.04
 #MAINTAINER Saul ALonso Ibarra Luevano

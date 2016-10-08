@@ -4,4 +4,5 @@ RUN apt-get update
 RUN apt-get -y install python-pip
 RUN pip install nodejs
 # RUN git clone https://github.com/AlonsoIbarra/NodeMysql.git
-RUN git clone -b docker https://6188c42d38db559c5f95e89f572d6c4d938dec3d:x-oauth-basic@github.com/AlonsoIbarra/NodeMysql.git
+#RUN git clone -b docker https://6188c42d38db559c5f95e89f572d6c4d938dec3d:x-oauth-basic@github.com/AlonsoIbarra/NodeMysql.git
+RUN git status

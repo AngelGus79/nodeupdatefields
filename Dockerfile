@@ -2,8 +2,10 @@ FROM debian:latest
 MAINTAINER Saul ALonso Ibarra Luevano
 RUN mkdir -p /opensource/
 WORKDIR /opensource/
-RUN apt-get -y update && apt-get -y install git
-RUN apt-get -y install gedit && apt-get -y install vim 
+RUN apt-get -y update
+RUN apt-get -y install git
+RUN apt-get -y install gedit 
+RUN apt-get -y install vim 
 RUN apt-get -y install python-pip
 RUN pip install nodejs
 RUN npm install mysql

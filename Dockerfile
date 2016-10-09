@@ -8,7 +8,7 @@ RUN apt-get -y install gedit
 RUN apt-get -y install vim 
 RUN apt-get -y install python-pip
 RUN pip install nodejs
-RUN npm install mysql
+#RUN npm install mysql
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/man/?? /usr/share/man/??_*
 
 RUN git clone https://github.com/AlonsoIbarra/NodeMysql.git
